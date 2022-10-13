@@ -1,0 +1,87 @@
+.table {
+    --bs-table-bg: #{$table-bg};
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #{$table-striped-color};
+    --bs-table-striped-bg: #{$table-striped-bg};
+    --bs-table-active-color: #{$table-active-color};
+    --bs-table-active-bg: #{$table-active-bg};
+    --bs-table-hover-color: #{$table-hover-color};
+    --bs-table-hover-bg: #{$table-hover-bg};
+  } 
+
+nav {
+
+    color: #fff;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+header{
+    color: #fff;
+
+}
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  section h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #683aa4;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  section p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+
+  }
+  button {
+    max-width: 50%;
+    border-radius: 50px !important;
+  }
+
+#hero {
+    background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#about {
+    background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+  #hero .col {
+    justify-content: center; 
+    flex-direction: column;
+    display: flex;
+  }
+  #hero .img-col {
+    justify-content: flex-end; 
+    margin-top: 100px;
+  }
+  #hero img {
+    max-width: 130% !important;
+    width: 130%;
+  }
+  #hero .card {
+    box-shadow: 11px 7px 16px #f9f9f9;
+    border: 0;
+    text-align: center;
+  }
+  #hero .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  }

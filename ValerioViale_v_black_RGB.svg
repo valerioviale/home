@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 500 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(2.85495,0,0,2.85495,-1351.56,-1050.16)">
+        <g transform="matrix(0.197376,0,0,0.197376,458.054,339.543)">
+            <text x="154.811px" y="762.194px" style="font-family:'Comfortaa-Regular', 'Comfortaa';font-size:125px;">v<tspan x="220.686px 305.311px 338.311px " y="762.194px 762.194px 762.194px ">ale</tspan>rio</text>
+            <text x="593.061px" y="762.194px" style="font-family:'Comfortaa-Light', 'Comfortaa';font-weight:300;font-size:125px;">vial<tspan x="815.061px " y="762.194px ">e</tspan></text>
+        </g>
+        <g transform="matrix(0.807113,0,0,0.807113,111.245,274.095)">
+            <g transform="matrix(-0.254542,-3.11724e-17,3.11724e-17,-0.254542,681.442,799.744)">
+                <path d="M407.867,2212.25L496.273,2263.29L496.273,2365.38L407.867,2416.42L319.461,2365.38L319.461,2263.29L407.867,2212.25Z"/>
+            </g>
+            <g transform="matrix(-0.254542,-3.11724e-17,3.11724e-17,-0.254542,698.334,814.092)">
+                <path d="M558.691,2488.15L631.168,2529.99L631.168,2613.68L558.691,2655.53L486.215,2613.68L486.215,2529.99L558.691,2488.15Z"/>
+            </g>
+            <g transform="matrix(-0.254542,-3.11724e-17,3.11724e-17,-0.254542,694.4,799.744)">
+                <path d="M637.782,2318.93L686.366,2346.98L686.366,2403.08L637.782,2431.13L589.199,2403.08L589.199,2346.98L637.782,2318.93Z"/>
+            </g>
+        </g>
+    </g>
+</svg>

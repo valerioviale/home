@@ -1,0 +1,1 @@
+copy also assets folder on the server
