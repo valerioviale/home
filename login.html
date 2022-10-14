@@ -29,6 +29,7 @@
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
+        color: black;
       }
 
       @media (min-width: 768px) {
@@ -46,20 +47,20 @@
 
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="background-color: #ffffff; color: white;" >
-    <div class="container-fluid" style="padding: 1px; margin: 20px;">
+    <div class="container-fluid" style="padding: 1px; margin: 20px; ">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" style="color: black;" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="corsi.html">Corsi</a>
+            <a class="nav-link" style="color: black;" href="corsi.html">Corsi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
+            <a class="nav-link" style="color: black;" href="login.html">Login</a>
           </li>
 
           
@@ -79,7 +80,7 @@
   
 
     <form action="/login" method="POST">
-      <h1 class="h3 mb-3 fw-normal">Inserisci i tuoi dati per entrare</h1>
+      <h1 class="h1 mb-4 fw-normal text-center">Bentornato!</h1>
 
       <!-- Email input -->
       <div class="form-outline mb-4">
@@ -95,7 +96,8 @@
     
       <!-- 2 column grid layout for inline styling -->
       <div class="row mb-4">
-        <div class="col d-flex justify-content-center">
+              <!-- allign check box to the left -->
+        <div class="col d-flex justify-content-left">
           <!-- Checkbox -->
           <div class="form-check">
             <input
@@ -111,7 +113,7 @@
     
         <div class="col">
           <!-- Simple link -->
-          <a href="#!">Password dimenticata?</a>
+          <a href="#!" class="text-right" style="color: #b8b88f;">Password dimenticata?</a>
         </div>
       </div>
     
@@ -120,9 +122,11 @@
     
       <!-- Register buttons -->
       <div class="text-center">
-        <p style="color: white;"> Non sei ancora registrato?  <a href="registrati.html" style="color: white;">Registrati Qui</a></p>
+        <p style="color: rgb(0, 0, 0);"> Non sei ancora registrato?  <a href="registrati.html" style="color: rgb(0, 0, 0);"> <u>Crea un nuovo account </u></a></p>
        
       </div>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+
     </form>
   </main>
 
