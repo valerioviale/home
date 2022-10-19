@@ -3,11 +3,15 @@ const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const PassportLocal = require('passport-local').Strategy;
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
+app.use(bodyParser.urlencoded({extended : true}));
 const app = express();
 
 app.use(express.urlencoded({extended: true}));
 
+mongoose.connect("mongodb+srv://mongo:carnival@cluster0.2kd43gq.mongodb.net/users")
 app.use('/assets', express.static('assets'));
 app.use('/', express.static('/'));
 app.use('/Users/valerio/Desktop/Courses/Website', express.static('website'));
@@ -67,4 +71,4 @@ app.post("/login",passport.authenticate(('local'),{
     // ricevere le credenziali ed iniziare la session
 } ));
 
-app.listen(8080,()=> console.log("Server started"));
+app.listen(3000,()=> console.log("Server started"));
