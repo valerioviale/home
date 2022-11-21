@@ -1,49 +1,62 @@
-var express=require("express");
-var bodyParser=require("body-parser");
+//declaring const express, path, bodyParser, app
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const app = express();
 
+const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://mongo:carnival@cluster0.2kd43gq.mongodb.net/users?retryWrites=true&w=majority');
-var db=mongoose.connection;
-db.on('error', console.log.bind(console, "connection error"));
-db.once('open', function(callback){
-	console.log("connection succeeded");
-})
-
-var app=express()
+const User = require('./user');
 
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({
-	extended: true
-}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post('/sign_up', function(req,res){
-	var name = req.body.name;
-	var email =req.body.email;
-	var pass = req.body.password;
+app.use(express.static(path.join(__dirname, 'public')));
 
-	var data = {
-		"name": name,
-		"email":email,
-		"password":pass,
-	}
-db.collection('details').insertOne(data,function(err, collection){
-		if (err) throw err;
-		console.log("Record inserted Successfully");
-			
-	});
-		
-	return res.redirect('index.html');
+const mongo_uri = 'mongodb+srv://mongo:carnival@cluster0.2kd43gq.mongodb.net/test?retryWrites=true&w=majority';
+
+mongoose.connect(mongo_uri, function (err) {
+    if (err) {
+        throw err;
+    } else {
+        console.log(`successfully connected to ${mongo_uri}`);
+    }
+});
+
+
+app.post('/register', function (req, res) {
+    const { firstName, lastName, username, password } = req.body;
+
+    const user = new User({ firstName, lastName, username, password });
+
+    user.save(err => {
+        if (err) {
+            res.status(500).send('error for user registration');
+        } else {
+            res.status(200).send('registration completed');
+        }
+    });
+});
+
+app.post('/autenticate', function (req, res) {
+    const { username, password } = req.body;
+
+    User.findOne({ username }).then(
+        (user, err) => {
+            if (err) {
+                res.status(500).send('some error occured');
+            } else if (!user) {
+                res.status(500).send('the user does not exist');
+            } else {
+                if (!bcrypt.compareSync(password, user.password))
+                    return res.status(401).send("wrong password");
+                return res.status(200).send('autenticated successfully');
+            }
+        }
+    )
+});
+app.listen(3000, function () {
+    console.log('server started');
 })
-
-
-app.get('/',function(req,res){
-res.set({
-	'Access-control-Allow-Origin': '*'
-	});
-return res.redirect('index.html');
-}).listen(3000)
-
-
-console.log("server listening at port 3000");
+module.exports = app;
